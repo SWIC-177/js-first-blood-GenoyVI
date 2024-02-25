@@ -13,7 +13,7 @@ const name= greet("John Oliver");
 
 
 
-console.log(greet);
+console.log(name);
 
 
 greet()
