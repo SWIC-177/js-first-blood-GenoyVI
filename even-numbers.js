@@ -1,9 +1,19 @@
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const person = {
+  name: "John Doe",
+  age: 23,
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    state: "NY",
+    zip: "10001",
+  },
+};
 
-for (let i = 0; i < numbers.length; i += 1) {
-  // initializing and specifying the true/false boolean to iterate over the LENGTH of the array
-  if (numbers[i] % 2 === 0) {
-    // if condition: no remainder is present during use of the modulo operator
-    console.log(numbers[i]);
-  }
-}
+const otherPerson = person;
+
+otherPerson.name = "Jane Doe";
+
+const zipcode = person.address.zip; // 10001
+console.log(`Person's name is: ${person.name}`);
+console.log(`Other Person's name is: ${otherPerson.name}`);
+console.log(`Zipcode is: ${zipcode}`);

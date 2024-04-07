@@ -38,8 +38,14 @@ function verifyAdulthood(personName, personAge) {
   return `Person not found.`; // else placed for return
 }
 
-for (let i = 0; i < people.length; i += 1) {
-  const person = people[i]; // let reacts differently upon reassignment
-  const adultMessage = verifyAdulthood(person.name, person.age);
-  console.log(`${person.name}: ${adultMessage}`);
+const person = { name: "John Doe", Age: 25, isAdult: true };
+
+function createGreeting(individual) {
+  return (salutation) => `${salutation}, ${individual.name}!`;
 }
+
+const greetJohn = createGreeting(person);
+console.log(greetJohn("Hello"));
+console.log(greetJohn("Good morning"));
+console.log(greetJohn("Buenos Dias!"));
+console.log(greetJohn("Guten tag!"));
